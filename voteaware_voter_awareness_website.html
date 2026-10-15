@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b46">
+<title>VoteAware | Voter Awareness Campaign</title>
+<style>
+:root{--navy:#102b46;--blue:#1c5d91;--saffron:#f39a3c;--green:#258568;--ink:#1c2938;--muted:#65758a;--paper:#f5f8fb;--white:#fff;--line:#e3eaf1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:inherit}.nav{position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.navin{max-width:1160px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:850;color:var(--navy);letter-spacing:-.4px}.logo{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:var(--navy);color:white;font-size:21px}.links{display:flex;gap:23px;align-items:center}.links a{text-decoration:none;font-size:14px;font-weight:650;color:#43566b}.links a:hover{color:var(--blue)}.menu{display:none}.hero{background:radial-gradient(circle at 85% 15%,#2d6489 0,transparent 29%),linear-gradient(125deg,#102b46,#174b70);color:white;overflow:hidden}.hero-in{max-width:1160px;margin:auto;padding:76px 22px 78px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #ffffff40;background:#ffffff12;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:750;letter-spacing:1px;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:#ffb65e}.hero h1{font-size:clamp(39px,5.4vw,68px);line-height:1.06;letter-spacing:-2.5px;margin:23px 0 19px}.hero h1 span{color:#ffbd70}.hero p{font-size:17px;max-width:600px;color:#dce8f2;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:12px 18px;font-weight:750;text-decoration:none;border:1px solid transparent;cursor:pointer;font:inherit;font-weight:750;transition:.2s}.btn-primary{background:var(--saffron);color:#1c2b3b}.btn-primary:hover{transform:translateY(-2px);background:#ffc27e}.btn-ghost{border-color:#ffffff70;color:white;background:#ffffff0c}.btn-ghost:hover{background:#ffffff20}.hero-art{position:relative;min-height:340px;display:grid;place-items:center}.orbit{position:absolute;width:310px;height:310px;border:1px solid #ffffff38;border-radius:50%}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #ffffff25;border-radius:50%;inset:25px}.orbit:after{inset:55px}.vote-card{position:relative;background:white;color:var(--navy);border-radius:25px;padding:25px;width:min(300px,90%);box-shadow:0 25px 65px #071d2d66;transform:rotate(-3deg)}.vote-card .mini{font-size:11px;letter-spacing:1.4px;color:var(--muted);font-weight:800}.vote-card h3{font-size:24px;line-height:1.15;margin:12px 0}.vote-card p{font-size:13px;color:var(--muted);margin:0 0 18px}.ink-mark{width:72px;height:72px;border-radius:50%;border:3px solid #d8e4ed;display:grid;place-items:center;font-size:37px;margin:0 auto 15px;color:var(--green)}.vote-card .stripe{height:5px;border-radius:9px;background:linear-gradient(90deg,#ed8d3d 0 33%,#fff 33% 66%,#258568 66%);border:1px solid #e5e8eb}
+.section{max-width:1160px;margin:auto;padding:68px 22px}.section-head{max-width:700px;margin-bottom:29px}.kicker{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--green);font-weight:850}.section h2{font-size:clamp(28px,3.5vw,40px);line-height:1.15;letter-spacing:-1px;color:var(--navy);margin:9px 0 12px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 5px 18px #122b4606}.card-icon{width:47px;height:47px;display:grid;place-items:center;border-radius:14px;background:#eaf3f8;font-size:23px;margin-bottom:18px}.card h3{font-size:17px;color:var(--navy);margin:0 0 8px}.card p{font-size:14px;color:var(--muted);margin:0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:28px}.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.stat strong{font-size:31px;display:block;color:var(--blue);letter-spacing:-1px}.stat span{font-size:13px;color:var(--muted)}.note{margin-top:16px;font-size:12px;color:var(--muted)}.soft{background:#eaf1f6}.two{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.checklist{display:grid;gap:13px;margin-top:22px}.check{display:flex;gap:12px;align-items:flex-start;background:white;border:1px solid var(--line);border-radius:14px;padding:15px}.check b{display:block;color:var(--navy);margin-bottom:2px}.check small{color:var(--muted);font-size:13px}.check-icon{width:31px;height:31px;flex:none;display:grid;place-items:center;background:#e4f4eb;color:var(--green);border-radius:10px;font-weight:900}.pledge{background:var(--navy);color:white;border-radius:22px;padding:29px}.pledge h3{font-size:23px;margin:0 0 10px}.pledge p{color:#d6e3ee}.pledge blockquote{margin:18px 0;padding-left:17px;border-left:3px solid var(--saffron);font-size:17px}.quiz{background:white;border:1px solid var(--line);border-radius:20px;padding:25px;max-width:760px}.quiz h3{margin-top:0;color:var(--navy)}.answers{display:grid;gap:10px}.answer{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:white;text-align:left;cursor:pointer;font:inherit}.answer:hover{border-color:var(--blue);background:#f2f8fc}.answer.correct{border-color:#258568;background:#e9f7ef}.answer.wrong{border-color:#d97757;background:#fff2ed}.feedback{min-height:28px;font-size:14px;font-weight:700;margin-top:13px}.resource-list{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.resource a{display:inline-flex;align-items:center;gap:7px;margin-top:13px;color:var(--blue);font-weight:750;text-decoration:none;font-size:14px}.resource a:hover{text-decoration:underline}.footer{background:#0c2034;color:#d9e4ee;padding:30px 22px}.footer-in{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center}.footer p{font-size:12px;color:#aebfce;margin:4px 0}.footer strong{color:white}.toplink{color:#ffbd70;text-decoration:none;font-size:13px;font-weight:700}
+@media(max-width:850px){.hero-in{grid-template-columns:1fr;padding-top:55px}.hero-art{min-height:290px}.orbit{width:270px;height:270px}.grid,.stats{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.resource-list{grid-template-columns:1fr}.links{gap:12px}.links a{font-size:12px}}
+@media(max-width:560px){.navin{padding:11px 16px}.links{display:none}.menu{display:inline-flex}.hero-in{padding:47px 18px 48px;gap:16px}.hero h1{letter-spacing:-1.5px}.hero p{font-size:15px}.hero-art{min-height:275px}.section{padding:48px 17px}.grid,.stats{grid-template-columns:1fr 1fr;gap:10px}.card,.stat{padding:16px}.card h3{font-size:15px}.card p{font-size:13px}.stat strong{font-size:27px}.footer-in{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="navin">
+<a class="brand" href="#home"><span class="logo">✓</span><span>VoteAware</span></a>
+<div class="links"><a href="#about">About</a><a href="#activities">Activities</a><a href="#findings">Survey</a><a href="#quiz">Quick Quiz</a><a href="#resources">Resources</a></div>
+<a class="btn btn-primary menu" href="#activities">Explore ↓</a>
+</div></nav>
+<header class="hero" id="home"><div class="hero-in">
+<div><span class="eyebrow"><span class="dot"></span> Community Engagement Project</span>
+<h1>Your Vote.<br><span>Your Voice.</span><br>Your Future.</h1>
+<p>A non-partisan voter awareness initiative for the Nagpada–Mumbai Central community. Learn why voting matters, understand the process, and help make every eligible voice count.</p>
+<div class="actions"><a class="btn btn-primary" href="#about">Explore the project <span>→</span></a><a class="btn btn-ghost" href="#resources">Voter resources ↗</a></div>
+</div>
+<div class="hero-art" aria-label="Illustration of a voter awareness card"><div class="orbit"></div><div class="vote-card"><div class="mini">VOTER AWARENESS</div><h3>Make your<br>voice count.</h3><p>Be informed. Be prepared. Participate responsibly.</p><div class="ink-mark">✓</div><div class="stripe"></div></div></div>
+</div></header>
+<main>
+<section class="section" id="about"><div class="section-head"><span class="kicker">About the project</span><h2>Awareness is the first step to participation.</h2><p>This Community Engagement Project focuses on educating residents—especially first-time voters—about voter registration, polling information, and the importance of informed participation in democracy.</p></div>
+<div class="grid">
+<div class="card"><div class="card-icon">🗳️</div><h3>Voting matters</h3><p>Understand how voting lets eligible citizens take part in choosing their representatives.</p></div>
+<div class="card"><div class="card-icon">🪪</div><h3>Registration basics</h3><p>Learn about voter registration, checking details, and correcting information through official channels.</p></div>
+<div class="card"><div class="card-icon">📍</div><h3>Know your booth</h3><p>Check your assigned polling station and plan ahead using official voter services.</p></div>
+<div class="card"><div class="card-icon">🤝</div><h3>Community action</h3><p>Share reliable information respectfully and encourage participation without party bias.</p></div>
+</div></section>
+<section class="section soft" id="activities"><div class="section-head"><span class="kicker">Project activities</span><h2>From information to action</h2><p>The report describes these activities as the core of the campaign.</p></div>
+<div class="grid">
+<div class="card"><div class="card-icon">📋</div><h3>1. Community survey</h3><p>Ask residents about their awareness of voter registration, polling booths, and election information.</p></div>
+<div class="card"><div class="card-icon">🧾</div><h3>2. Help desk</h3><p>Guide people towards official registration and correction processes; avoid collecting unnecessary personal data.</p></div>
+<div class="card"><div class="card-icon">📣</div><h3>3. Awareness rally</h3><p>Use simple messages and a voter pledge to spread awareness across the community.</p></div>
+<div class="card"><div class="card-icon">🎭</div><h3>4. EVM/VVPAT demo</h3><p>Explain the voting process in an educational demonstration and use a street play to engage people.</p></div>
+</div></section>
+<section class="section" id="findings"><div class="section-head"><span class="kicker">Survey snapshot</span><h2>What the report highlights</h2><p>The figures below are reported in the project document. They are not independently verified and should be presented as project survey findings.</p></div>
+<div class="stats">
+<div class="stat"><strong>100</strong><span>Residents surveyed, as reported</span></div>
+<div class="stat"><strong>58%</strong><span>Knew their assigned polling booth location</span></div>
+<div class="stat"><strong>41%</strong><span>Knew the documents needed for registration</span></div>
+<div class="stat"><strong>22%</strong><span>Knew about helpline 1950 and cVIGIL</span></div>
+</div><p class="note">Source: figures stated in the supplied CEP report. Confirm the underlying survey records before using these numbers in a formal presentation.</p></section>
+<section class="section soft"><div class="two"><div><span class="kicker">A non-partisan message</span><h2>Informed choices. Respectful participation.</h2><p>Voter awareness should help people understand the process—not tell them which party or candidate to support. Use reliable information, respect different opinions, and protect people’s privacy.</p>
+<div class="checklist">
+<div class="check"><span class="check-icon">✓</span><div><b>Share verified information</b><small>Use official election resources for current rules and details.</small></div></div>
+<div class="check"><span class="check-icon">✓</span><div><b>Keep it non-partisan</b><small>Do not pressure anyone or promote a political party.</small></div></div>
+<div class="check"><span class="check-icon">✓</span><div><b>Respect privacy</b><small>Never post voter IDs, phone numbers, or personal records publicly.</small></div></div>
+</div></div>
+<div class="pledge"><div style="font-size:28px">✋</div><h3>My voter awareness pledge</h3><p>I will seek accurate election information, respect every eligible voter’s choice, and encourage peaceful, informed, and non-partisan participation in democracy.</p><blockquote>“A stronger democracy begins with informed citizens.”</blockquote><a class="btn btn-primary" href="#resources">Find official resources →</a></div>
+</div></section>
+<section class="section" id="quiz"><div class="section-head"><span class="kicker">Test what you know</span><h2>Quick voter awareness quiz</h2><p>Try this short question to check your understanding.</p></div>
+<div class="quiz"><h3>Should a voter awareness campaign tell people which party to vote for?</h3><div class="answers"><button class="answer" data-correct="false">Yes, it should promote one party.</button><button class="answer" data-correct="true">No, it should explain the process neutrally.</button><button class="answer" data-correct="false">Only if the campaign is held in a public place.</button></div><div class="feedback" id="feedback" aria-live="polite"></div></div></section>
+<section class="section soft" id="resources"><div class="section-head"><span class="kicker">Useful links</span><h2>Use official voter information</h2><p>For current registration, polling station, and election-related information, visit official sources.</p></div>
+<div class="resource-list">
+<div class="card resource"><div class="card-icon">🇮🇳</div><h3>Election Commission of India</h3><p>Official election information, notices, and voter services.</p><a href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer">Visit ECI website ↗</a></div>
+<div class="card resource"><div class="card-icon">🧑‍💻</div><h3>Voters’ Service Portal</h3><p>Find official voter registration and electoral-roll services.</p><a href="https://voters.eci.gov.in/" target="_blank" rel="noopener noreferrer">Open voter portal ↗</a></div>
+<div class="card resource"><div class="card-icon">☎️</div><h3>Need assistance?</h3><p>Check the current official contact and helpline details on the ECI website.</p><a href="https://www.eci.gov.in/" target="_blank" rel="noopener noreferrer">Check official contacts ↗</a></div>
+</div></section>
+</main>
+<footer class="footer"><div class="footer-in"><div><strong>VoteAware</strong><p>Voter Awareness Campaign · Community Engagement Project</p><p>Nagpada–Mumbai Central area · Educational project website</p></div><a class="toplink" href="#home">Back to top ↑</a></div></footer>
+<script>
+document.querySelectorAll('.answer').forEach(button=>button.addEventListener('click',()=>{
+ const feedback=document.getElementById('feedback');
+ document.querySelectorAll('.answer').forEach(b=>{b.classList.remove('correct','wrong');b.disabled=false});
+ if(button.dataset.correct==='true'){button.classList.add('correct');feedback.textContent='Correct! Awareness campaigns should remain neutral and explain the voting process.';feedback.style.color='#258568'}
+ else{button.classList.add('wrong');feedback.textContent='Not quite. A voter awareness campaign should be non-partisan and informative.';feedback.style.color='#b45335'}
+}));
+</script>
+</body>
+</html>
